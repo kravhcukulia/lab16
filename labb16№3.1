@@ -1,0 +1,20 @@
+from tkinter import *
+
+root = Tk()
+root.title("Зірка і Овал на відстані")
+
+canvas = Canvas(root, width=500, height=300, bg="white")
+canvas.pack()
+
+# Зірка (праворуч угорі)
+star_points = [300, 50,  320, 120, 390, 120,
+               335, 160, 350, 230, 300, 190,
+               250, 230, 265, 160, 210, 120,
+               280, 120]
+
+canvas.create_polygon(star_points, fill="yellow", outline="black")
+
+# Овал (ліворуч унизу)
+canvas.create_oval(80, 200, 150, 260, fill="gold", outline="black")
+
+root.mainloop()
